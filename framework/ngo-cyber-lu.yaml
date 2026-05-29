@@ -1,0 +1,548 @@
+urn: urn:ngo-cyber-lu:risk:library:ngo-cybersecurity-luxembourg
+locale: en
+ref_id: NGO-CYBER-LU
+name: NGO Cybersecurity Luxembourg
+description: A practical cybersecurity framework for small NGOs in Luxembourg. Two
+  tiers, designed for organisations of up to 20 people with limited budgets.
+copyright: CC BY 4.0, University of Luxembourg
+version: 1
+publication_date: 2026-05-29
+provider: University of Luxembourg
+packager: Baudet, Stelmes, Nwaoyibo, Dinh Vo Truc
+objects:
+  framework:
+    urn: urn:ngo-cyber-lu:risk:framework:ngo-cybersecurity-luxembourg
+    ref_id: NGO-CYBER-LU
+    name: NGO Cybersecurity Luxembourg
+    description: 'Practical cybersecurity framework for small NGOs in Luxembourg.
+      Filter by Implementation Group: BASICS (everyone), T1 (Tier I, no IT person),
+      T2 (Tier II, with IT person).'
+    min_score: 1
+    max_score: 5
+    scores_definition:
+    - score: 1
+      name: Not started
+      description: The control is not in place. Nobody is currently working on it.
+    - score: 2
+      name: In progress
+      description: The team is actively setting up the control. It is not yet operational.
+    - score: 3
+      name: Implemented
+      description: The control is in place and operational. Staff know about it and
+        use it.
+    - score: 4
+      name: Reviewed regularly
+      description: The control is in place and the NGO checks it at the cadence defined
+        in the guide (e.g. quarterly access review, annual restore test).
+    - score: 5
+      name: Continuously improved
+      description: The control is in place, reviewed, and the NGO actively learns
+        from near-misses and incidents to improve it over time.
+    implementation_groups_definition:
+    - ref_id: BASICS
+      name: The Five Basics
+      description: Essential controls for every NGO regardless of tier. Apply unconditionally.
+    - ref_id: T1
+      name: Tier I
+      description: For small NGOs (1 to 5 people) without anyone able to operate cybersecurity
+        controls.
+    - ref_id: T2
+      name: Tier II
+      description: For small NGOs (up to 20 people) with at least one person able
+        to manage admin consoles, devices, and security alerts.
+    requirement_nodes:
+    - urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:basics
+      assessable: false
+      depth: 1
+      ref_id: BASICS
+      name: The Five Basics
+    - urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:basics.1
+      assessable: false
+      depth: 2
+      parent_urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:basics
+      ref_id: BASICS.1
+      name: Essential controls
+    - urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:basics.1.1
+      assessable: true
+      depth: 3
+      parent_urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:basics.1
+      ref_id: BASICS.1.1
+      name: Two-step login (MFA) everywhere
+      description: Every account holding NGO work (email, cloud drives, banking, online
+        tools) requires both a password and a second step (code from phone or authenticator).
+        Most incidents that affect small NGOs start with a stolen password. Two-step
+        login stops almost all of them.
+      implementation_groups:
+      - BASICS
+      - T1
+      - T2
+    - urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:basics.1.2
+      assessable: true
+      depth: 3
+      parent_urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:basics.1
+      ref_id: BASICS.1.2
+      name: Data is backed up
+      description: NGO work lives in a cloud workspace (Microsoft 365 for Nonprofits
+        or Google Workspace for Nonprofits, free for eligible NGOs). Once a year,
+        someone tries restoring a file from backup to confirm it works.
+      implementation_groups:
+      - BASICS
+      - T1
+      - T2
+    - urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:basics.1.3
+      assessable: true
+      depth: 3
+      parent_urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:basics.1
+      ref_id: BASICS.1.3
+      name: Devices update themselves
+      description: Automatic updates are turned on for every computer and phone. Most
+        attacks exploit problems that updates have already fixed, but only on devices
+        where those updates are actually installed.
+      implementation_groups:
+      - BASICS
+      - T1
+      - T2
+    - urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:basics.1.4
+      assessable: true
+      depth: 3
+      parent_urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:basics.1
+      ref_id: BASICS.1.4
+      name: Yearly one-hour awareness session
+      description: Once a year the team covers spotting suspicious emails, why passwords
+        should not be reused, and what to do when something seems wrong. Every new
+        joiner does the same session. Free materials from NC3 Luxembourg and ENISA.
+      implementation_groups:
+      - BASICS
+      - T1
+      - T2
+    - urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:basics.1.5
+      assessable: true
+      depth: 3
+      parent_urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:basics.1
+      ref_id: BASICS.1.5
+      name: Emergency contact card kept offline
+      description: A printed page listing who to call first inside the NGO, CIRCL
+        (Luxembourg incident response), police (113), and cloud provider support.
+      implementation_groups:
+      - BASICS
+      - T1
+      - T2
+    - urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:basics.1.6
+      assessable: true
+      depth: 3
+      parent_urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:basics.1
+      ref_id: BASICS.1.6
+      name: Standing rule for incidents
+      description: If something looks wrong (unexpected emails sent in your name,
+        accounts you cannot log into, files disappearing, ransom messages), disconnect
+        the device and call the designated person before doing anything else. Never
+        pay a ransom.
+      implementation_groups:
+      - BASICS
+      - T1
+      - T2
+    - urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t1
+      assessable: false
+      depth: 1
+      ref_id: T1
+      name: Tier I Controls (NGO without an IT person)
+    - urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t1.1
+      assessable: false
+      depth: 2
+      parent_urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t1
+      ref_id: T1.1
+      name: Cloud workspace setup
+    - urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t1.1.1
+      assessable: true
+      depth: 3
+      parent_urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t1.1
+      ref_id: T1.1.1
+      name: Use a single nonprofit cloud workspace
+      description: 'Microsoft 365 for Nonprofits or Google Workspace for Nonprofits.
+        Put all NGO work there: email, shared documents, calendars. Do not run your
+        own email or file server.'
+      implementation_groups:
+      - T1
+      - T2
+    - urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t1.1.2
+      assessable: true
+      depth: 3
+      parent_urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t1.1
+      ref_id: T1.1.2
+      name: 2-step verification enforced for everyone
+      description: Turn on security defaults (Microsoft) or 2-step verification for
+        everyone (Google) so two-step login is enforced across the whole team.
+      implementation_groups:
+      - T1
+      - T2
+    - urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t1.1.3
+      assessable: true
+      depth: 3
+      parent_urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t1.1
+      ref_id: T1.1.3
+      name: Individual logins, no shared accounts
+      description: Every person on the team has their own login.
+      implementation_groups:
+      - T1
+      - T2
+    - urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t1.1.4
+      assessable: true
+      depth: 3
+      parent_urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t1.1
+      ref_id: T1.1.4
+      name: Password manager installed and used
+      description: Bitwarden (free) or 1Password (free for nonprofits). Everyone on
+        the team uses it.
+      implementation_groups:
+      - T1
+      - T2
+    - urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t1.2
+      assessable: false
+      depth: 2
+      parent_urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t1
+      ref_id: T1.2
+      name: Device basics
+    - urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t1.2.1
+      assessable: true
+      depth: 3
+      parent_urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t1.2
+      ref_id: T1.2.1
+      name: Personal device with password and auto-updates
+      description: Each person has their own device with a login password and automatic
+        updates turned on.
+      implementation_groups:
+      - T1
+      - T2
+    - urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t1.2.2
+      assessable: true
+      depth: 3
+      parent_urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t1.2
+      ref_id: T1.2.2
+      name: Disk encryption enabled
+      description: On modern Mac, Windows, and Chromebook devices this is the default,
+        just verify it is enabled.
+      implementation_groups:
+      - T1
+      - T2
+    - urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t1.2.3
+      assessable: true
+      depth: 3
+      parent_urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t1.2
+      ref_id: T1.2.3
+      name: Use the built-in antivirus
+      description: Microsoft Defender on Windows, built-in protection on Mac and Chromebook.
+        No need to install third-party antivirus.
+      implementation_groups:
+      - T1
+      - T2
+    - urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t1.3
+      assessable: false
+      depth: 2
+      parent_urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t1
+      ref_id: T1.3
+      name: Email handling
+    - urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t1.3.1
+      assessable: true
+      depth: 3
+      parent_urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t1.3
+      ref_id: T1.3.1
+      name: Sensitive info via cloud links, not attachments
+      description: Sensitive documents are shared through links to the cloud workspace,
+        not as attachments.
+      implementation_groups:
+      - T1
+      - T2
+    - urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t1.3.2
+      assessable: true
+      depth: 3
+      parent_urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t1.3
+      ref_id: T1.3.2
+      name: Designated person checks suspicious emails
+      description: If an email feels wrong, do not click, forward it to one designated
+        person who decides. If urgent, verify the source through another channel.
+      implementation_groups:
+      - T1
+      - T2
+    - urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t1.3.3
+      assessable: true
+      depth: 3
+      parent_urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t1.3
+      ref_id: T1.3.3
+      name: Email authentication configured (SPF, DKIM, DMARC)
+      description: One-time setup that prevents attackers from impersonating your
+        domain.
+      implementation_groups:
+      - T1
+      - T2
+    - urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t1.4
+      assessable: false
+      depth: 2
+      parent_urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t1
+      ref_id: T1.4
+      name: Data and incident preparation
+    - urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t1.4.1
+      assessable: true
+      depth: 3
+      parent_urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t1.4
+      ref_id: T1.4.1
+      name: No critical file only on a personal laptop
+      description: Everything important goes in the shared cloud drive.
+      implementation_groups:
+      - T1
+      - T2
+    - urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t1.4.2
+      assessable: true
+      depth: 3
+      parent_urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t1.4
+      ref_id: T1.4.2
+      name: Annual restore test
+      description: Once a year, restore a file from the workspace recycle bin or version
+        history. Confirm it works before you actually need it.
+      implementation_groups:
+      - T1
+      - T2
+    - urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t2
+      assessable: false
+      depth: 1
+      ref_id: T2
+      name: Tier II Controls (NGO with at least one IT person)
+    - urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t2.1
+      assessable: false
+      depth: 2
+      parent_urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t2
+      ref_id: T2.1
+      name: Strengthened logins and access
+    - urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t2.1.1
+      assessable: true
+      depth: 3
+      parent_urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t2.1
+      ref_id: T2.1.1
+      name: Conditional access enabled
+      description: Require two-step login from unusual locations and block legacy
+        authentication methods.
+      implementation_groups:
+      - T2
+    - urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t2.1.2
+      assessable: true
+      depth: 3
+      parent_urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t2.1
+      ref_id: T2.1.2
+      name: IT person has two separate accounts
+      description: One for daily work, one for admin. The admin account is never used
+        for web browsing.
+      implementation_groups:
+      - T2
+    - urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t2.1.3
+      assessable: true
+      depth: 3
+      parent_urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t2.1
+      ref_id: T2.1.3
+      name: Quarterly access review
+      description: Every three months the IT person reviews access. People who left
+        have access removed. Staff with broader access than their role have permissions
+        trimmed.
+      implementation_groups:
+      - T2
+    - urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t2.1.4
+      assessable: true
+      depth: 3
+      parent_urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t2.1
+      ref_id: T2.1.4
+      name: Offboarding checklist within 24 hours
+      description: 'When someone leaves: disable account, recover files, change any
+        shared passwords they knew.'
+      implementation_groups:
+      - T2
+    - urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t2.2
+      assessable: false
+      depth: 2
+      parent_urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t2
+      ref_id: T2.2
+      name: Device management
+    - urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t2.2.1
+      assessable: true
+      depth: 3
+      parent_urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t2.2
+      ref_id: T2.2.1
+      name: MDM tool enrolling every device
+      description: Microsoft Intune, Google MDM, or Apple Business Manager. The IT
+        person can update devices, lock them if lost, and verify security settings.
+      implementation_groups:
+      - T2
+    - urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t2.2.2
+      assessable: true
+      depth: 3
+      parent_urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t2.2
+      ref_id: T2.2.2
+      name: BYOD policy in writing
+      description: One short paragraph stating what files or systems personal devices
+        may and may not access.
+      implementation_groups:
+      - T2
+    - urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t2.2.3
+      assessable: true
+      depth: 3
+      parent_urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t2.2
+      ref_id: T2.2.3
+      name: Device inventory maintained
+      description: A simple list of every device the NGO uses, who has it, and when
+        it was set up.
+      implementation_groups:
+      - T2
+    - urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t2.3
+      assessable: false
+      depth: 2
+      parent_urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t2
+      ref_id: T2.3
+      name: Email security (advanced)
+    - urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t2.3.1
+      assessable: true
+      depth: 3
+      parent_urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t2.3
+      ref_id: T2.3.1
+      name: Email authentication in enforcement mode
+      description: SPF, DKIM and DMARC moved from monitoring (p=none) to enforcement
+        (p=quarantine or p=reject).
+      implementation_groups:
+      - T2
+    - urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t2.3.2
+      assessable: true
+      depth: 3
+      parent_urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t2.3
+      ref_id: T2.3.2
+      name: Anti-phishing settings reviewed
+      description: Default anti-phishing settings in the admin console are reviewed
+        and tightened where appropriate.
+      implementation_groups:
+      - T2
+    - urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t2.3.3
+      assessable: true
+      depth: 3
+      parent_urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t2.3
+      ref_id: T2.3.3
+      name: Report-this-email mechanism in place
+      description: A button or a designated address where staff forward suspicious
+        mail.
+      implementation_groups:
+      - T2
+    - urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t2.4
+      assessable: false
+      depth: 2
+      parent_urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t2
+      ref_id: T2.4
+      name: Backup discipline
+    - urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t2.4.1
+      assessable: true
+      depth: 3
+      parent_urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t2.4
+      ref_id: T2.4.1
+      name: Annual file restoration test
+      description: Restore a sample of files from backup once a year. Do not trust
+        the backup dashboard alone.
+      implementation_groups:
+      - T2
+    - urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t2.4.2
+      assessable: true
+      depth: 3
+      parent_urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t2.4
+      ref_id: T2.4.2
+      name: Retention rules defined
+      description: Deleted files kept for a defined period then permanently removed.
+        Personal data kept only as long as needed.
+      implementation_groups:
+      - T2
+    - urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t2.5
+      assessable: false
+      depth: 2
+      parent_urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t2
+      ref_id: T2.5
+      name: Documentation and training
+    - urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t2.5.1
+      assessable: true
+      depth: 3
+      parent_urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t2.5
+      ref_id: T2.5.1
+      name: IT person actions documented
+      description: Every important step is written down. If they leave tomorrow, the
+        next person can pick up.
+      implementation_groups:
+      - T2
+    - urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t2.5.2
+      assessable: true
+      depth: 3
+      parent_urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t2.5
+      ref_id: T2.5.2
+      name: Annual ransomware tabletop exercise
+      description: 'Board and IT person walk through one scenario: what would we do
+        if all our files were locked by ransomware? 60 minutes is enough.'
+      implementation_groups:
+      - T2
+    - urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t2.5.3
+      assessable: true
+      depth: 3
+      parent_urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t2.5
+      ref_id: T2.5.3
+      name: Emergency admin credentials stored safely
+      description: Sealed envelope or shared password vault, so the NGO is not locked
+        out if the IT person is unreachable.
+      implementation_groups:
+      - T2
+    - urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t2.6
+      assessable: false
+      depth: 2
+      parent_urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t2
+      ref_id: T2.6
+      name: Supplier review
+    - urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t2.6.1
+      assessable: true
+      depth: 3
+      parent_urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t2.6
+      ref_id: T2.6.1
+      name: Five-question check before new suppliers
+      description: (1) Where is data hosted, EU preferred? (2) GDPR compliant, DPA
+        signed? (3) Any breach in last two years? (4) Security certifications? (5)
+        How do we get our data back if we leave?
+      implementation_groups:
+      - T2
+    - urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t2.6.2
+      assessable: true
+      depth: 3
+      parent_urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t2.6
+      ref_id: T2.6.2
+      name: Annual review of key suppliers
+      description: Same five questions reviewed once a year for existing key suppliers.
+      implementation_groups:
+      - T2
+    - urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t2.7
+      assessable: false
+      depth: 2
+      parent_urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t2
+      ref_id: T2.7
+      name: Risk management
+    - urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t2.7.1
+      assessable: true
+      depth: 3
+      parent_urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t2.7
+      ref_id: T2.7.1
+      name: Quarterly risk list review
+      description: One page covering most likely things to go wrong, worst impact,
+        what we are doing, what changed, near-misses. Near-miss documentation is the
+        single most valuable security practice.
+      implementation_groups:
+      - T2
+    - urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t2.8
+      assessable: false
+      depth: 2
+      parent_urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t2
+      ref_id: T2.8
+      name: Annual check-up
+    - urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t2.8.1
+      assessable: true
+      depth: 3
+      parent_urn: urn:ngo-cyber-lu:risk:req_node:ngo-cybersecurity-luxembourg:t2.8
+      ref_id: T2.8.1
+      name: Yearly Fit4Cybersecurity self-assessment
+      description: Free from NC3 Luxembourg. Get a score, share with board, aim to
+        improve gradually.
+      implementation_groups:
+      - T2
