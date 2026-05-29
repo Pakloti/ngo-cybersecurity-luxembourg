@@ -6,7 +6,7 @@ A practical cybersecurity framework for small NGOs in Luxembourg. Two tiers, GDP
 
 ## Why this exists
 
-Small NGOs in Luxembourg — patient associations, peer-support groups, prevention organisations, small care providers — handle sensitive personal data with limited budgets and often no IT staff. Most cybersecurity guides are written for enterprises and ask for things these organisations cannot realistically sustain.
+Small NGOs in Luxembourg (patient associations, peer-support groups, prevention organisations, small care providers) handle sensitive personal data with limited budgets and often no IT staff. Most cybersecurity guides are written for enterprises and ask for things these organisations cannot realistically sustain.
 
 This framework is different. It is **sized to what a small NGO can actually do**, organised into two honest tiers based on a single question: does your NGO have someone who can operate cybersecurity controls?
 
@@ -21,7 +21,7 @@ This framework is different. It is **sized to what a small NGO can actually do**
 
 - Large NGOs with dedicated security teams
 - Hospitals and other healthcare providers (sector-specific rules apply)
-- Anyone looking for a formal certification scheme — this is a working framework, not a badge
+- Anyone looking for a formal certification scheme this is a working framework, not a badge
 
 ## What's in this repository
 
@@ -35,7 +35,7 @@ This framework is different. It is **sized to what a small NGO can actually do**
 
 ## The framework in one minute
 
-**The five basics — every NGO, every tier**
+**The five basics for every NGO**
 1. Two-step login (MFA) everywhere
 2. Backups (use a cloud workspace; test restores once a year)
 3. Automatic device updates
@@ -64,9 +64,9 @@ If you just want the guide, open [`guide/cybersecurity-guide.pdf`](guide/cyberse
 
 ## Useful contacts in Luxembourg
 
-- **NC3** — National Cybersecurity Competence Center (free training, Fit4Cybersecurity self-assessment)
-- **CIRCL** — Computer Incident Response Center Luxembourg (call them first when something serious happens)
-- **CNPD** — Commission nationale pour la protection des données (data breach notifications within 72 hours)
+- **NC3** : National Cybersecurity Competence Center (free training, Fit4Cybersecurity self-assessment)
+- **CIRCL** : Computer Incident Response Center Luxembourg (call them first when something serious happens)
+- **CNPD** : Commission nationale pour la protection des données (data breach notifications within 72 hours)
 
 Full contact details are in the guide.
 
@@ -80,5 +80,5 @@ This framework is meant to grow with feedback from NGOs that actually use it. If
 
 ## Disclaimer
 
-This guide is a working framework, not legal advice. For binding interpretation of GDPR, the ASBL law, the ASFT law, NIS2, or sector-specific requirements, consult a lawyer or the relevant Luxembourg authority. Cybersecurity practices evolve — review your tier and risk list annually.
+This guide is a working framework, not legal advice. For binding interpretation of GDPR, the ASBL law, the ASFT law, NIS2, or sector-specific requirements, consult a lawyer or the relevant Luxembourg authority. Cybersecurity practices evolve review your tier and risk list annually.
 
