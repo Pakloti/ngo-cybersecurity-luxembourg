@@ -27,11 +27,11 @@ This framework is different. It is **sized to what a small NGO can actually do**
 
 | File | What it contains |
 |---|---|
-| `guide/cybersecurity-guide.pdf` | The full 19-page practical guide |
+| `guide/framework-guide-ngo.pdf` | The full 19-page practical guide |
+| `guide/annex-gdpr-mapping.pdf` | The Annex covering GDPR obligations |
 | `framework/ngo-cyber-lu.yaml` | The framework, formatted for [CISO Assistant](https://github.com/intuitem/ciso-assistant-community) |
-| `framework/ngo-cyber-lu.xlsx` | The same framework in Excel format |
-| `templates/risk-list.md` | A one-page risk register template |
-| `templates/incident-card.md` | The emergency contact card to print and keep offline |
+| `framework/README.me` | The steps to import the framework in your Ciso assistant setup |
+| `templates/Risk-Register.xlsx` | A one-page risk register template |
 
 ## The framework in one minute
 
@@ -42,7 +42,7 @@ This framework is different. It is **sized to what a small NGO can actually do**
 4. A yearly one-hour awareness session
 5. An offline emergency contact card
 
-**Tier I** (1–5 people, no IT person): rely on the security built into your tools.
+**Tier I** (1‚Äì5 people, no IT person): rely on the security built into your tools.
 **Tier II** (up to ~20 people, at least one IT-capable person): configure and verify those tools properly.
 **Sensitive personal data add-ons**: extra steps for NGOs handling health, vulnerability, or children's data.
 
@@ -51,10 +51,10 @@ This framework is different. It is **sized to what a small NGO can actually do**
 [CISO Assistant](https://github.com/intuitem/ciso-assistant-community) is a free, open-source GRC platform that lets you track your cybersecurity controls and produce evidence for funders or auditors.
 
 1. Install CISO Assistant locally (see their [installation guide](https://intuitem.gitbook.io/ciso-assistant/deployment/local))
-2. In the web interface, go to **Libraries → Add library**
+2. In the web interface, go to **Libraries ‚Üí Add library**
 3. Upload `framework/ngo-cyber-lu.yaml`
 4. Create a new **Compliance Assessment** and select the framework
-5. Work through the requirements — mark each one *compliant*, *partially compliant*, *non-compliant*, or *not applicable*
+5. Work through the requirements ‚Äî mark each one *compliant*, *partially compliant*, *non-compliant*, or *not applicable*
 
 You can also use the PDF guide on its own, without CISO Assistant.
 
@@ -66,7 +66,7 @@ If you just want the guide, open [`guide/cybersecurity-guide.pdf`](guide/cyberse
 
 - **NC3** : National Cybersecurity Competence Center (free training, Fit4Cybersecurity self-assessment)
 - **CIRCL** : Computer Incident Response Center Luxembourg (call them first when something serious happens)
-- **CNPD** : Commission nationale pour la protection des données (data breach notifications within 72 hours)
+- **CNPD** : Commission nationale pour la protection des donn√©es (data breach notifications within 72 hours)
 
 Full contact details are in the guide.
 
@@ -81,4 +81,6 @@ This framework is meant to grow with feedback from NGOs that actually use it. If
 ## Disclaimer
 
 This guide is a working framework, not legal advice. For binding interpretation of GDPR, the ASBL law, the ASFT law, NIS2, or sector-specific requirements, consult a lawyer or the relevant Luxembourg authority. Cybersecurity practices evolve review your tier and risk list annually.
+
+
 
