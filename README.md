@@ -60,7 +60,7 @@ You can also use the PDF guide on its own, without CISO Assistant.
 
 ## Reading the PDF guide alone
 
-If you just want the guide, open [`guide/cybersecurity-guide.pdf`](guide/cybersecurity-guide.pdf). Start with the **five basics**, identify your tier using the one-question test on page 12, then follow the section for your tier.
+If you just want the guide, open [`guide/framework-guide-ngo.pdf`](guide/framework-guide-ngo.pdf). Start with the **five basics**, identify your tier using the one-question test on page 12, then follow the section for your tier.
 
 ## Useful contacts in Luxembourg
 
